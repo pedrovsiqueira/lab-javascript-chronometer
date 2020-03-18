@@ -14,12 +14,12 @@ class Chronometer {
   }
 
   twoDigitsNumber(value) {
-    // ... your code goes here
     if (value < 10) {
       return `0${value}`;
     }
     return `${value}`;
   }
+  
   stopClick() {
     clearInterval(this.intervalId)
   }
