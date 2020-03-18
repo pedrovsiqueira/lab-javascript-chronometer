@@ -10,13 +10,18 @@ class Chronometer {
     return Math.floor(this.currentTime / 60)
   }
   getSeconds() {
-    return (this.currentTime)
+    return this.currentTime % 60
   }
-  twoDigitsNumber() {
+
+  twoDigitsNumber(value) {
     // ... your code goes here
+    if (value < 10) {
+      return `0${value}`;
+    }
+    return `${value}`;
   }
   stopClick() {
-    // ... your code goes here
+    clearInterval(this.intervalId)
   }
   resetClick() {
     // ... your code goes here
